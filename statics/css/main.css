@@ -19,7 +19,7 @@ form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+section, summary, time, mark, audio, video{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -3193,12 +3193,12 @@ footer ul{
 .paper-year h2{
 	font-size: 3rem;
 }
-.paper-container {
+/* .paper-container {
 	background-color: #ffffff;
 	box-shadow: 1px 1px 1px 1px #888888;
 	border-radius: 5px;
 	padding: 10px;
-}
+} */
 /* .paper-dropdown {
 	background-color: #ffffff;
 	box-shadow: 1px 1px 1px 1px #888888;
@@ -3209,7 +3209,7 @@ footer ul{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 0.5em 0 0.5em;
+	padding: 0 0.5em 2em 0.5em;
 	margin:0;
 }
 .paper-year h2 {
@@ -3309,5 +3309,22 @@ footer ul{
 	.__container {
 		width: 100%;
 	}
+}
 
+summary {
+	outline:none;
+	font-size: 2em;
+}
+/* details summary::-webkit-details-marker {
+  display:none;
+} */
+
+photo-container>figure {
+	margin:0;
+	width:33.3%;
+}
+
+photo-container	{
+	display: flex;
+	justify-content: space-between;
 }

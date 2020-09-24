@@ -26,5 +26,6 @@ urlpatterns = [
     path('publication/',views.publication, name="publication"),
     path('member/',views.member, name="member"),
     path('project/',views.project, name ="project"),
-    path('notice/',views.notice, name="notice")
+    path('notice/',views.notice, name="notice"),
+    path('photo/',views.photo, name="photo"),
 ]

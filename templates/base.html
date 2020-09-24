@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang='ko'>
 	<head>
 		<title>{% block title %}UX Media{% endblock title %}</title>
 		<meta charset="utf-8" />
@@ -44,7 +44,7 @@
 								<a href="#">Board</a>
 								<ul>
 									<li><a href="{% url "notice" %}">Notice</a></li>
-									<li><a href="#">Photo</a></li>
+									<li><a href="{% url "photo" %}">Photo</a></li>
 								</ul>
 							</li>
 						</ul>

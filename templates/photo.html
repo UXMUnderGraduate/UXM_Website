@@ -1,42 +1,33 @@
 {% extends 'base.html' %} 
-{% block title %} Publication {% endblock title %}
-{% block headtitle %}Publication{% endblock headtitle %}
+{% load static %}
+{% block title %} Photo {% endblock title %}
+{% block headtitle %} Photo {% endblock headtitle %}
 {% block content %}
 <div class="wrapper">
 	<main class="container">
-		{% for paper_row in paper_table %}
-		<details class="paper-year">
-			<summary>
-				{{paper_row.year_data}}
-				<div class="paper-dropdown-icon"><i class="fas fa-angle-up"></i></div>
-			</summary>
-			<hr />
-			<section class="journal-papers">
-				<header>
-					<h3>Journal</h3>
-				</header>
-				{% for paper in paper_row.journal_paper_list %}
-				<article class="paper">
-					<h4 class="paper_title">{{paper.title}}</h4>
-					<p class="paper_author">{{paper.author}}</p>
-					<p class="paper_publication_data">{{paper.publication_data}}</p>
-				</article>
-				{% endfor %}
-			</section>
-		</details>
-		<section class="conference-papers">
-			<header>
-				<h3>Conference</h3>
-			</header>
-			{% for paper in paper_row.conference_paper_list %}
-			<article class="paper">
-				<h4 class="paper_title">{{paper.title}}</h4>
-				<p class="paper_author">{{paper.author}}</p>
-				<p class="paper_publication_data">{{paper.publication_data}}</p>
-			</article>
-			{% endfor %}
+		<section class="photo-container">
+			<figure>
+				<img src="{% static 'images/professorK.jpg' %}" alt="테스트용 사진" height="300px" title="어디에 무엇하러 간 사진">
+				<figcaption>
+					<div>어디어디서 무엇무엇하는 사진</div>
+					<div>몇년 몇월 몇일</div>
+				</figcaption>
+			</figure>
+			<figure>
+				<img src="{% static 'images/professorK.jpg' %}" alt="테스트용 사진" height="300px" title="어디에 무엇하러 간 사진">
+				<figcaption>
+					<div>어디어디서 무엇무엇하는 사진</div>
+					<div>몇년 몇월 몇일</div>
+				</figcaption>
+			</figure>
+			<figure>
+				<img src="{% static 'images/professorK.jpg' %}" alt="테스트용 사진" height="300px" title="어디에 무엇하러 간 사진">
+				<figcaption>
+					<div>어디어디서 무엇무엇하는 사진</div>
+					<div>몇년 몇월 몇일</div>
+				</figcaption>
+			</figure>
 		</section>
-		{% endfor %}
 	</main>
 </div>
 {% endblock content %}
