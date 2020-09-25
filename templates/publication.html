@@ -6,15 +6,15 @@
 	<main class="__container">
 		{% for paper_row in paper_table %}
 			{% if paper_row.is_latest %}
-			<section class="paper-container">
+			<details class="paper-container" open>
 			{% else %}
-			<section class="paper-dropdown">
+			<details class="paper-dropdown">
 			{% endif %}
-				<header class="paper-year">
+				<summary class="paper-year">
 					<h2>{{paper_row.year_data}}</h2>
-					<div class="paper-dropdown-icon"><i class="fas fa-angle-up"></i></div>
-				</header>
+					{% comment %} <div class="paper-dropdown-icon"><i class="fas fa-angle-up"></i></div> {% endcomment %}
 				<hr/>
+				</summary>
 				<section class="journal-papers">
 					<header>
 						<h3>Journal</h3>
@@ -39,7 +39,7 @@
 					</article>
 					{% endfor %}
 				</section>
-			</section>
+			</details>
 		{% endfor %}
 	</main>
 </div>
