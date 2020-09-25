@@ -3313,18 +3313,18 @@ footer ul{
 
 summary {
 	outline:none;
-	font-size: 2em;
+	font-size: 1em;
 }
 /* details summary::-webkit-details-marker {
   display:none;
 } */
 
-photo-container>figure {
+.photo-container>figure {
 	margin:0;
 	width:33.3%;
 }
 
-photo-container	{
+.photo-container	{
 	display: flex;
 	justify-content: space-between;
 }
