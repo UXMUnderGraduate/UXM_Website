@@ -1992,8 +1992,10 @@ input, select, textarea {
 				text-align: left;
 				font-weight: 400;
 				padding: 0.5em 1em 0.5em 1em;
+
 			}
 
+			
 			table.default tfoot {
 				border-top: solid 1px #D2D7DC;
 			}
@@ -3328,3 +3330,5 @@ summary {
 	display: flex;
 	justify-content: space-between;
 }
+
+

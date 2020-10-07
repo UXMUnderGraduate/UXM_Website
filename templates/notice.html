@@ -1,88 +1,61 @@
 {% extends 'base.html' %}
 {% block title %} Notice {% endblock title %} 
-{% block mainview %} {% endblock mainview %} 
+{% block headtitle %}Notice{% endblock headtitle %}
 {% block content %}
+<!--bootstrap-->
+<style>
+.pagination {
+    list-style-type : none;
+    padding:0;
+    margin :0 auto;
+    text-align:center;
+}
+.pagination > li{
+    display : inline;
+}
+</style>
 <div class="wrapper">
     <div class="container" id="main">
 
         <!-- Content -->
             <article id="content" >
                 <header>
-                    <h2>Notice</h2>
-                    <br>
-                    <hr>
-                    <article id="content">
-                        <table style="text-align:center; ">
-                            <thead>
+                    
+                        <table class= "table table-striped" style="font-size:10px;text-align:center; ">
+                            <thead style="border-bottom: 1px solid gray;border-top: 1px solid gray">
                                 <tr>
-                                    <th>번호</th>
-                                    <th>제목</th>
-                                    <th>작성일</th>
-                                    <th>작성자</th>
-                                    <th>조회수</th>
-                                    <th>첨부파일 여부</th>
+                                    <th width= 3%></th>
+                                    <th width = 50%>제목</th>
+                                    <th width = 14%>작성일</th>
+                                    <th width = 14%>작성자</th>
+                                    <th width= 12%>조회수</th>
+                                    <th width = 7%>첨부</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                {% for notice in notice_list %}
                                 <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
+                                    <td>{{notice.number}}</td>
+                                    <td>{{notice.title}}</td>
+                                    <td>{{notice.date}}</td>
+                                    <td>{{notice.writer}}</td>
+                                    <td>{{notice.view}}</td>
+                                    <td>{{notice.file}}</td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
+                                {% endfor %}
+                                
                             </tbody>
                         </table>
-                    </article>
+                    <ul class="pagination">
+                        <li><a href="#">&lt;</a></a></li>
+                        <li><a href="#">1</a></a></li>
+                        <li><a href="#">2</a></a></li>
+                        <li><a href="#">3</a></a></li>
+                        <li><a href="#">4</a></a></li>
+                        <li><a href="#">5</a></a></li>
+                        <li><a href="#">&gt;</a></a></li>
+                    </ul> 
+                    
     </div>
 </div>
 {% endblock content %}
